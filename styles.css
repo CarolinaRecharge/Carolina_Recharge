@@ -662,3 +662,98 @@ section {
   .cta-banner { padding: 60px 0; }
   .stats-row { grid-template-columns: repeat(2, 1fr); gap: 24px; }
 }
+
+/* ============================================
+   MARKET STATS SECTION
+   ============================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.stat-item {
+  text-align: center;
+  padding: 40px 28px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+}
+.stat-big-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: var(--electric-blue);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.stat-item-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--pure-white);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.stat-item-desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   FAQ ACCORDION
+   ============================================ */
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.faq-list details {
+  border-bottom: 1px solid rgba(30,58,138,0.08);
+  padding: 4px 0;
+}
+.faq-list details:first-child {
+  border-top: 1px solid rgba(30,58,138,0.08);
+}
+.faq-list summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--deep-navy);
+  gap: 16px;
+  transition: var(--transition);
+  user-select: none;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary:hover { color: var(--electric-blue); }
+.faq-list summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--electric-blue);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: var(--transition);
+}
+.faq-list details[open] summary::after {
+  content: '−';
+}
+.faq-list details[open] summary {
+  color: var(--electric-blue);
+}
+.faq-answer {
+  padding: 0 0 24px;
+}
+.faq-answer p {
+  color: var(--slate-gray);
+  font-size: 0.97rem;
+  line-height: 1.75;
+}
